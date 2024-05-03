@@ -4,7 +4,7 @@ function playSonido (idElementoAudio){
 
 const listaDeTeclas = document.querySelectorAll('.tecla');//Creamos un arreglo que contenga todas los elemntos
 //que contengan la clase .tecla
-
+/*
 let contador = 0//inicializamos el contador
 
 while (contador < 9){
@@ -19,4 +19,25 @@ while (contador < 9){
    }; 
    contador = contador + 1;
    
+}*/
+for(let contador=0; contador < listaDeTeclas.length; contador++){
+    const tecla=listaDeTeclas[contador];
+    const instrumento = tecla.classList[1];
+    console.log(contador)
+
+    const idAudio = `#sonido_${instrumento}`;
+    console.log(idAudio);
+
+    tecla.onclick = function(){
+        playSonido(idAudio);
+    };
+   
+    tecla.onkeydown = function(){
+        tecla.classList.add('activa');
+}
+    tecla.onkeyup = function(){
+    tecla.classList.remove('activa');
+}
+
+
 }
