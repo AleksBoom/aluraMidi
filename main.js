@@ -5,7 +5,7 @@ function playSonido (idElementoAudio){
 const listaDeTeclas = document.querySelectorAll('.tecla');//Creamos un arreglo que contenga todas los elemntos
 //que contengan la clase .tecla
 
-let contador = 0
+let contador = 0//inicializamos el contador
 
 while (contador < 9){
    const tecla = listaDeTeclas[contador];
