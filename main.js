@@ -22,7 +22,7 @@ while (contador < 9){
 }*/
 for(let contador=0; contador < listaDeTeclas.length; contador++){
     const tecla=listaDeTeclas[contador];
-    const instrumento = tecla.classList[1];
+    const instrumento = tecla.classList[1];// guardamos la segunda clase de cada boton en instrumento
     console.log(contador)
 
     const idAudio = `#sonido_${instrumento}`;
